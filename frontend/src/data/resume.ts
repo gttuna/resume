@@ -1,31 +1,26 @@
 import type { ResumeData } from '../types/resume';
 
-// Define all contact methods including phone
-const allContactMethods = [
+// Contact methods - phone is conditionally compiled out in production
+const contactMethods = [
   {
     type: 'email' as const,
     label: 'Email',
     value: 'thekylevenable@gmail.com',
     href: 'mailto:thekylevenable@gmail.com',
   },
-  {
+  // Phone contact only in development - completely removed from production bundle
+  ...(import.meta.env.DEV ? [{
     type: 'phone' as const,
     label: 'Phone',
     value: '(330) 573-5138',
     href: 'tel:+13305735138',
-  },
+  }] : []),
   {
     type: 'location' as const,
     label: 'Location',
     value: 'Cuyahoga Falls, OH',
   },
 ];
-
-// Filter out phone number in production builds (at build time)
-// This ensures the phone number is NOT included in the production bundle
-const contactMethods = import.meta.env.DEV
-  ? allContactMethods
-  : allContactMethods.filter(c => c.type !== 'phone');
 
 export const resumeData: ResumeData = {
   profile: {
