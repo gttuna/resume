@@ -1,0 +1,242 @@
+/* Hide print resume on screen, show only in print */
+.print-resume {
+  display: none;
+}
+
+@media print {
+  /* Show print resume, hide everything else */
+  .print-resume {
+    display: block !important;
+    background: white;
+    color: black;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hero Section */
+  .print-hero {
+    margin-bottom: 8px;
+  }
+
+  .print-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+    line-height: 1.15;
+    color: #5940a4;
+  }
+
+  .print-headline {
+    font-size: 12px;
+    margin: 0 0 3px 0;
+    line-height: 1.25;
+    color: #000;
+  }
+
+  .print-summary {
+    font-size: 11px;
+    margin: 0 0 3px 0;
+    line-height: 1.3;
+    color: #000;
+  }
+
+  .print-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 11px;
+    color: #000;
+  }
+
+  .print-contact-item {
+    margin-right: 8px;
+  }
+
+  /* Section Styles */
+  .print-section {
+    margin-bottom: 8px;
+  }
+
+  .print-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  /* Skills Grid - 3 columns */
+  .print-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px 8px;
+  }
+
+  .print-skill-category {
+    font-size: 11px;
+    line-height: 1.25;
+    color: #000;
+  }
+
+  .print-skill-category strong {
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  /* Projects Grid - 2 columns */
+  .print-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 10px;
+  }
+
+  .print-project-card {
+    border: 1px solid #ddd;
+    padding: 5px 6px;
+    page-break-inside: avoid;
+  }
+
+  .print-project-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-project-desc {
+    font-size: 11px;
+    margin: 0 0 3px 0;
+    line-height: 1.25;
+    color: #000;
+  }
+
+  .print-project-impact {
+    font-size: 10.5px;
+    margin: 0 0 3px 0;
+    line-height: 1.25;
+    font-style: italic;
+    color: #000;
+  }
+
+  .print-project-tags {
+    font-size: 10px;
+    margin: 0;
+    line-height: 1.15;
+    color: #666;
+  }
+
+  /* Experience Section */
+  .print-experience-role {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+  }
+
+  .print-experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .print-role-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-role-dates {
+    font-size: 11px;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-role-company {
+    font-size: 12px;
+    margin: 0 0 3px 1rem;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-role-summary {
+    font-size: 11px;
+    margin: 0 0 3px 1rem;
+    line-height: 1.25;
+    font-style: italic;
+    color: #000;
+  }
+
+  .print-role-achievements {
+    margin: 0 0 3px 1.5rem;
+    padding-left: 14px;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #000;
+  }
+
+  .print-role-achievements li {
+    margin-bottom: 1px;
+  }
+
+  .print-role-tags {
+    font-size: 10.5px;
+    margin: 0;
+    line-height: 1.15;
+    color: #666;
+  }
+
+  /* Education Section */
+  .print-education {
+    margin-bottom: 4px;
+  }
+
+  .print-edu-institution {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-edu-credential {
+    font-size: 11.5px;
+    margin: 0 0 2px 0;
+    line-height: 1.15;
+    color: #000;
+  }
+
+  .print-edu-details {
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.25;
+    font-style: italic;
+    color: #000;
+  }
+
+  /* Global print styles */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+    page-break-after: avoid;
+  }
+}

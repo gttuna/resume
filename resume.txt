@@ -1,0 +1,114 @@
+Kyle Venable
+
+Contact
+
+Email:
+thekylevenable@gmail.com
+
+Phone:
+(330) 573-5138
+
+Address:
+Cuyahoga Falls, OH, 44221
+
+Professional Summary
+
+Strategic leader in information services with over 13 years of expertise in managing high-availability systems, networks, and optimizing workflows through DevOps initiatives. Skilled in full-stack development, API design and integration, and real-time monitoring using advanced technologies. Proven track record in driving operational efficiency and delivering actionable insights for decision-making.
+
+Experience
+
+Freelance Software Engineer
+Self EmployedJun 2023 - Present
+
+Architected an infrastructure management platform for a web development agency, consolidating WordPress VPS cluster provisioning, monitoring, and automation with third-party integrations (security, cloud management, SMTP) into a unified interface for non-technical team members
+Developed a custom Docker orchestration system using Python and Docker SDK, extending docker-compose functionality with dynamic runtime configuration and advanced container customization
+Engineered a Python-based Video-On-Demand platform powering a 24/7 Twitch channel for a popular creator, featuring automated scheduling, real-time rendering/filtering (MoviePy, OpenCV, HLSL/GLSL shaders) for interstitial generation, across a content archive spanning over a decade
+Built an interactive Twitch chatbot / engagement tool using React/Tailwind CSS and FastAPI, integrating various Twitch API's for real-time viewer interactions including IoT-triggered RTSP camera feeds
+Created a full-stack project management and time tracking application using React (Material UI) and FastAPI, implementing role-based access control and secure authentication
+
+Director of Information Services
+Aheliotech, Columbus, OH / Apr 2018 - Sep 2025
+
+Managed a High-Availability (PCS) Zabbix monitoring cluster overseeing over 10,000 devices and processing approximately 6,000 values per second
+Leveraged tools including Grafana and the ELK stack (Elasticsearch, Logstash, Kibana) to ensure real-time monitoring and reporting
+Designed and implemented ETL processes for billing, auditing, and operational requirements by integrating multiple APIs
+Built and maintained an API gateway platform using Python (FastAPI) and nginx, streamlining system integrations and reducing manual intervention
+Developed a full-stack reporting platform using React, MongoDB, Redis, and Celery, providing actionable insights that informed strategic decision-making for both management and clients.
+Led DevOps initiatives employing Python, Bash, Rust, Ansible, and VMware vSphere to automate and optimize operational workflows for my teams.
+Managed the VoIP department, supervising staff and overseeing systems based on Asterisk, FreePBX, FreeSWITCH, and Kamailio, ensuring robust communication infrastructure insights that informed strategic decision-making
+
+Chief IT Engineer
+Web Force Systems, Columbus, OH / Jun 2012 - Apr 2018
+
+Designed and implemented a city-wide Metro Ethernet/fiber network that serviced over 100 small to medium businesses
+Engineered and maintained a VoIP network with more than 2,000 endpoints, leveraging platforms such as Asterisk, FreePBX, FreeSWITCH, and Kamailio
+Configured and maintained Cisco IOS routers and switches, handling complex protocols and configurations (EBGP/IBGP, OSPF, 802.1Q, QoS)
+Managed end-to-end project lifecycles-from sales and design/engineering to procurement, implementation, and final delivery
+Led a team of technicians in proactive maintenance and rapid resolution of customer issues
+Integrated DevOps tools (Confluence, HipChat, osTicket) to improve internal collaboration and streamline service delivery
+
+Research Associate
+Ohio University Avionics Engineering Center, Athens, OH / Sep 2010 - May 2012
+
+Conducted undergraduate research under a NASA Langley grant for the NextGen Integrated Intelligent Flight Deck (IIFD) project
+Developed an interface between a flight simulator and a simulation model using C# .NET and MATLAB/Simulink
+Implemented and maintained a Windows Server 2008 file server, Subversion Version Control System, and managed a Hyper-V Virtual Machine host
+
+Education
+
+Ohio University
+OH
+
+Electrical Engineering / Computer Science Coursework
+
+Skills
+
+Zabbix
+Microsoft Entra ID
+Grafana
+Nagios
+Git
+CI/CD
+ELK Stack
+Web & API Development
+FastAPI
+React
+Node.js
+MongoDB
+MySQL/MariaDB
+PostgreSQL
+Microsoft Azure
+ETL and Integrations
+Microsoft Graph API
+Python
+Rust
+Bash
+C# / .NET
+PHP
+Ansible
+VMware vSphere
+Microsoft Hyper-V
+TrueNAS
+Cisco IOS
+Juniper
+Ubiquiti
+BGP
+OSPF
+QoS
+802.1Q (VLANs)
+VoIP Systems
+SIP
+Asterisk
+Session Border Controllers
+FreePBX
+FreeSWITCH
+Kamailio
+Red Hat Enterprise Linux
+Debian / Ubuntu
+FreeBSD
+Windows Server
+LDAP
+Windows Active Directory
+
+References
+References available upon request

@@ -1,0 +1,454 @@
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #0b0d17;
+}
+
+@media print {
+  /* Remove browser headers and footers */
+  @page {
+    size: letter;
+    margin: 0.3in 0.4in;
+  }
+
+  /* Override browser default headers */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide screen version, show print version */
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt !important;
+    line-height: 1.2 !important;
+  }
+
+  #root {
+    padding: 0 !important;
+    background: #ffffff !important;
+    min-height: 0 !important;
+  }
+
+  /* ULTRA COMPACT SPACING - Everything should be minimal */
+  .MuiContainer-root {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ALL Stack spacing to absolute minimum */
+  .MuiStack-root,
+  .MuiStack-root > *,
+  .MuiBox-root > * {
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    gap: 2px !important;
+  }
+
+  /* Section spacing - ULTRA tight */
+  body > div > div > div > div > * + * {
+    margin-top: 4px !important;
+  }
+
+  /* Remove ALL borders and make cards invisible */
+  .MuiPaper-root,
+  .MuiCard-root {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 4px 0 !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Hide buttons */
+  .MuiButton-root,
+  .MuiButtonBase-root {
+    display: none !important;
+  }
+
+  /* AGGRESSIVE typography - single line spacing */
+  .MuiTypography-root {
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  .MuiTypography-h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+  }
+
+  .MuiTypography-h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.05 !important;
+    color: #5940a4 !important;
+    margin: 1px 0 !important;
+    font-weight: 600 !important;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 0.9rem !important;
+    line-height: 1.05 !important;
+    margin: 3px 0 1px 0 !important;
+    font-weight: 700 !important;
+  }
+
+  .MuiTypography-h5 {
+    font-size: 0.85rem !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 0.75rem !important;
+    line-height: 1.05 !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 0.68rem !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+  }
+
+  .MuiTypography-body2 {
+    font-size: 0.65rem !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+
+  .MuiTypography-subtitle1 {
+    font-size: 0.72rem !important;
+    line-height: 1.15 !important;
+    color: #5940a4 !important;
+    margin: 1px 0 !important;
+  }
+
+  .MuiTypography-overline {
+    font-size: 0.6rem !important;
+    line-height: 1.05 !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* Paragraph spacing in hero summary - remove gap */
+  .MuiTypography-body1 + .MuiTypography-body1 {
+    margin-top: 1px !important;
+  }
+
+  /* ULTRA COMPACT cards */
+  .MuiCardContent-root {
+    padding: 3px 6px !important;
+  }
+
+  /* Chips - INLINE, small, minimal */
+  .MuiChip-root {
+    background-color: transparent !important;
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+    font-size: 0.65rem !important;
+    height: 16px !important;
+    margin: 0 2px 2px 0 !important;
+    padding: 0 4px !important;
+  }
+
+  .MuiChip-label {
+    padding: 0 4px !important;
+  }
+
+  /* Contact pills - inline, minimal */
+  [class*='ContactPills'] .MuiStack-root {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  /* Skills - 3-COLUMN GRID LAYOUT */
+  [class*='SkillsSection'] .MuiBox-root[style*='grid'] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: 6px !important;
+    row-gap: 1px !important;
+  }
+
+  [class*='SkillsSection'] .MuiCard-root {
+    display: block !important;
+    break-inside: avoid !important;
+    margin-bottom: 1px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  [class*='SkillsSection'] .MuiCardContent-root {
+    padding: 1px 0 !important;
+  }
+
+  [class*='SkillsSection'] .MuiStack-root {
+    display: inline !important;
+    gap: 0 !important;
+  }
+
+  [class*='SkillsSection'] .MuiTypography-h6 {
+    display: inline !important;
+    font-weight: 700 !important;
+    font-size: 0.7rem !important;
+  }
+
+  [class*='SkillsSection'] .MuiTypography-h6::after {
+    content: ': ' !important;
+  }
+
+  [class*='SkillsSection'] .MuiStack-root[style*='flexWrap'] {
+    display: inline !important;
+  }
+
+  [class*='SkillsSection'] .MuiChip-root {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    height: auto !important;
+  }
+
+  [class*='SkillsSection'] .MuiChip-label {
+    padding: 0 !important;
+    font-size: 0.62rem !important;
+  }
+
+  [class*='SkillsSection'] .MuiChip-root::after {
+    content: ', ' !important;
+  }
+
+  [class*='SkillsSection'] .MuiChip-root:last-child::after {
+    content: '' !important;
+  }
+
+  /* Section headings - minimal margin */
+  [class*='SectionHeading'] {
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-bottom: 1px !important;
+    margin-top: 2px !important;
+  }
+
+  [class*='SectionHeading'] .MuiStack-root {
+    gap: 0 !important;
+  }
+
+  [class*='SectionHeading'] .MuiTypography-body1 {
+    display: none !important; /* Hide section descriptions to save space */
+  }
+
+  [class*='SectionHeading'] .MuiTypography-h4 {
+    margin: 1px 0 !important;
+  }
+
+  /* Projects - 3-COLUMN GRID LAYOUT */
+  [class*='ProjectsSection'] .MuiBox-root[style*='grid'] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: 6px !important;
+    row-gap: 2px !important;
+  }
+
+  [class*='ProjectsSection'] .MuiCard-root {
+    margin-bottom: 0 !important;
+    padding: 2px 3px !important;
+    border: 1px solid #e0e0e0 !important;
+    break-inside: avoid !important;
+  }
+
+  [class*='ProjectsSection'] .MuiCardContent-root {
+    padding: 0 !important;
+  }
+
+  [class*='ProjectsSection'] .MuiStack-root {
+    gap: 0px !important;
+  }
+
+  /* Make project titles smaller */
+  [class*='ProjectsSection'] .MuiTypography-h5 {
+    font-size: 0.75rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Compact project descriptions */
+  [class*='ProjectsSection'] .MuiTypography-body1 {
+    font-size: 0.62rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Impact text */
+  [class*='ProjectsSection'] .MuiTypography-body2 {
+    font-size: 0.6rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hide "Impact:" label to save space, just show the text */
+  [class*='ProjectsSection'] strong {
+    display: none !important;
+  }
+
+  /* Experience - ultra compact */
+  [class*='ExperienceSection'] .MuiPaper-root {
+    padding: 2px 4px !important;
+    margin-bottom: 2px !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  [class*='ExperienceSection'] .MuiStack-root {
+    gap: 0px !important;
+  }
+
+  /* Compact experience role summaries */
+  [class*='ExperienceSection'] .MuiTypography-body1 {
+    margin: 1px 0 !important;
+  }
+
+  /* List items - minimal */
+  .MuiList-root {
+    padding: 0 !important;
+    margin: 1px 0 !important;
+  }
+
+  .MuiListItem-root {
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: flex-start !important;
+    line-height: 1.1 !important;
+  }
+
+  .MuiListItemAvatar-root {
+    min-width: 16px !important;
+    margin-top: 1px !important;
+  }
+
+  .MuiListItemText-root {
+    margin: 0 !important;
+  }
+
+  .MuiListItemText-primary {
+    line-height: 1.15 !important;
+  }
+
+  /* Icons - tiny */
+  .MuiSvgIcon-root {
+    font-size: 0.7rem !important;
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+  }
+
+  /* Dividers - minimal */
+  .MuiDivider-root {
+    margin: 0 4px !important;
+  }
+
+  /* Hide decorations */
+  .MuiBox-root[style*='position: absolute'] {
+    display: none !important;
+  }
+
+  /* Remove gradients */
+  .MuiPaper-root[style*='gradient'],
+  .MuiBox-root[style*='gradient'] {
+    background: #ffffff !important;
+  }
+
+  /* Hide footer */
+  .no-print,
+  .MuiPaper-root.no-print {
+    display: none !important;
+  }
+
+  /* Stack direction fix for experience dates */
+  [class*='ExperienceSection'] .MuiStack-root[style*='justifyContent'] {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+
+  /* Inline chips in experience tags */
+  [class*='ExperienceSection'] .MuiChip-root {
+    display: inline-block !important;
+    margin: 0 3px 3px 0 !important;
+  }
+
+  /* Hero section - compact + remove border radius */
+  .MuiPaper-root:first-of-type {
+    padding: 4px 0 !important;
+    margin-bottom: 2px !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Compact hero stacks */
+  .MuiPaper-root:first-of-type .MuiStack-root {
+    gap: 1px !important;
+  }
+
+  /* Education - minimal */
+  [class*='EducationSection'] .MuiCard-root {
+    padding: 2px 4px !important;
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  [class*='EducationSection'] .MuiStack-root {
+    gap: 0px !important;
+  }
+
+  /* Links */
+  a {
+    color: #5940a4 !important;
+    text-decoration: none !important;
+  }
+
+  /* Force tight spacing on all Stacks */
+  [class*='MuiStack'] {
+    gap: 2px !important;
+  }
+
+  /* Remove padding from CardContent everywhere */
+  .MuiCardContent-root:last-child {
+    padding-bottom: 3px !important;
+  }
+}
