@@ -22,7 +22,7 @@ echo ""
 
 # Step 3: Build frontend for production
 echo "Step 3: Building frontend for production..."
-npm run build
+npm run build:production
 echo "✓ Frontend built"
 echo ""
 
