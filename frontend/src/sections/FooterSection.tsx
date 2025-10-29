@@ -8,11 +8,6 @@ interface FooterSectionProps {
 }
 
 export function FooterSection({ profile }: FooterSectionProps) {
-  // Filter out phone number in production
-  const contacts = import.meta.env.DEV
-    ? profile.contact
-    : profile.contact.filter(c => c.type !== 'phone');
-
   return (
     <Paper
       elevation={0}
@@ -43,7 +38,7 @@ export function FooterSection({ profile }: FooterSectionProps) {
             the needle. Reach out and let's explore what we can ship together.
           </Typography>
         </Stack>
-        <ContactPills contacts={contacts} />
+        <ContactPills contacts={profile.contact} />
         <Box>
           <Button
             variant="contained"

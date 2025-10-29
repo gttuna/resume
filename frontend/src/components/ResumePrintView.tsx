@@ -8,11 +8,6 @@ interface ResumePrintViewProps {
 export function ResumePrintView({ data }: ResumePrintViewProps) {
   const { profile, skills, projects, experience, education } = data;
 
-  // Filter out phone number in production
-  const contacts = import.meta.env.DEV
-    ? profile.contact
-    : profile.contact.filter(c => c.type !== 'phone');
-
   return (
     <div className="print-resume">
       {/* Hero Section */}
@@ -22,7 +17,7 @@ export function ResumePrintView({ data }: ResumePrintViewProps) {
         <p className="print-headline">{profile.headline}</p>
         <p className="print-summary">{profile.summary.join(' ')}</p>
         <div className="print-contact">
-          {contacts.map((contact) => (
+          {profile.contact.map((contact) => (
             <span key={contact.label} className="print-contact-item">
               {contact.value}
             </span>

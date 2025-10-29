@@ -1,5 +1,32 @@
 import type { ResumeData } from '../types/resume';
 
+// Define all contact methods including phone
+const allContactMethods = [
+  {
+    type: 'email' as const,
+    label: 'Email',
+    value: 'thekylevenable@gmail.com',
+    href: 'mailto:thekylevenable@gmail.com',
+  },
+  {
+    type: 'phone' as const,
+    label: 'Phone',
+    value: '(330) 573-5138',
+    href: 'tel:+13305735138',
+  },
+  {
+    type: 'location' as const,
+    label: 'Location',
+    value: 'Cuyahoga Falls, OH',
+  },
+];
+
+// Filter out phone number in production builds (at build time)
+// This ensures the phone number is NOT included in the production bundle
+const contactMethods = import.meta.env.DEV
+  ? allContactMethods
+  : allContactMethods.filter(c => c.type !== 'phone');
+
 export const resumeData: ResumeData = {
   profile: {
     name: 'Kyle Venable',
@@ -10,25 +37,7 @@ export const resumeData: ResumeData = {
       'Blends DevOps, observability, problem solving, leadership, and forward product thinking to craft intuitive tools and experiences for technical and non-technical teams while driving measurable impact.',
     ],
     location: 'Cuyahoga Falls, Ohio',
-    contact: [
-      {
-        type: 'email',
-        label: 'Email',
-        value: 'thekylevenable@gmail.com',
-        href: 'mailto:thekylevenable@gmail.com',
-      },
-      {
-        type: 'phone',
-        label: 'Phone',
-        value: '(330) 573-5138',
-        href: 'tel:+13305735138',
-      },
-      {
-        type: 'location',
-        label: 'Location',
-        value: 'Cuyahoga Falls, OH',
-      },
-    ],
+    contact: contactMethods,
   },
   projects: [
     {
