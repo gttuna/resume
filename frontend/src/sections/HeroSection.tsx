@@ -9,6 +9,11 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ profile }: HeroSectionProps) {
+  // Filter out phone number in production
+  const contacts = import.meta.env.DEV
+    ? profile.contact
+    : profile.contact.filter(c => c.type !== 'phone');
+
   return (
     <Paper
       elevation={0}
@@ -56,7 +61,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
             ))}
           </Stack>
         </Stack>
-        <ContactPills contacts={profile.contact} />
+        <ContactPills contacts={contacts} />
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} flexWrap="wrap">
           <Button
             variant="contained"
