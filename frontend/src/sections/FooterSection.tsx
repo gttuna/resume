@@ -8,6 +8,11 @@ interface FooterSectionProps {
 }
 
 export function FooterSection({ profile }: FooterSectionProps) {
+  // Filter out phone number in production
+  const contacts = import.meta.env.DEV
+    ? profile.contact
+    : profile.contact.filter(c => c.type !== 'phone');
+
   return (
     <Paper
       elevation={0}
@@ -28,17 +33,17 @@ export function FooterSection({ profile }: FooterSectionProps) {
       <Stack spacing={3}>
         <Stack spacing={1.5}>
           <Typography variant="overline" color="secondary.light" letterSpacing={2}>
-            Let’s Build
+            Let's Build
           </Typography>
           <Typography variant="h4">
             Ready to elevate your infrastructure, automation, or product experience?
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 640 }}>
             I partner with organizations to design resilient systems and intuitive interfaces that move
-            the needle. Reach out and let’s explore what we can ship together.
+            the needle. Reach out and let's explore what we can ship together.
           </Typography>
         </Stack>
-        <ContactPills contacts={profile.contact} />
+        <ContactPills contacts={contacts} />
         <Box>
           <Button
             variant="contained"
